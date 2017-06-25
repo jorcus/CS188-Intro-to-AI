@@ -46,7 +46,7 @@ class Grades:
     self.prereqs = defaultdict(set)
 
     #print 'Autograder transcript for %s' % self.project
-    print 'Starting on %d-%d at %d:%02d:%02d' % self.start
+    print ('Starting on %d-%d at %d:%02d:%02d' % self.start)
 
   def addPrereq(self, question, prereq):
     self.prereqs[question].add(prereq)
@@ -59,8 +59,8 @@ class Grades:
 
     completedQuestions = set([])
     for q in self.questions:
-      print '\nQuestion %s' % q
-      print '=' * (9 + len(q))
+      print ('\nQuestion %s' % q)
+      print ('=' * (9 + len(q)))
       print
       self.currentQuestion = q
 
