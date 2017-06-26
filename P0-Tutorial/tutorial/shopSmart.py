@@ -33,7 +33,7 @@ def shopSmart(orderList, fruitShops):
     price = shopReturn.getPriceOfOrder(orderList)
     for shop in fruitShops:
         TotalCost = shop.getPriceOfOrder(orderList)
-        if price >= TotalCost:
+        if price > TotalCost:
             shopReturn = shop
             price = TotalCost
     return shopReturn
